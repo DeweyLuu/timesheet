@@ -45,21 +45,27 @@ function entireQuery() {
 	    .and('DateVal', '>=', '2016-05-08T00:00:00.000Z').and('DateVal', '<=', '2016-05-15T00:00:00.000Z'),
 	    */
 	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/49211213851') //tbi development
+	    .or('TimeEntryItem.Project', '=', '/project/56200604007') //prism dev
 	    .or('TimeEntryItem.Project', '=', '/project/49998887731') //prism
 	    .or('TimeEntryItem.Project', '=', '/project/50982925414') //info dev
 	    .or('TimeEntryItem.Project', '=', '/project/50982923609') //core
 	    .or('TimeEntryItem.Project', '=', '/project/50982926429') //finance
 	    .or('TimeEntryItem.Project', '=', '/project/50983112863') //qwod
+	    .or('TimeEntryItem.Project', '=', '/project/49211212319') //peoplesoft
+	    .or('TimeEntryItem.Project', '=', '/project/49211213495') //ev5
 	    .or('TimeEntryItem.Project', '=', '/project/55635571848') //db migration
 	    .or('TimeEntryItem.Project', '=', '/project/49431743155') //scrum team 1
 	    .or('TimeEntryItem.Project', '=', '/project/50402293352') //scrum team 9
 	    .or('TimeEntryItem.Project', '=', '/project/50301126915') //swipejobs
 	    .or('TimeEntryItem.Project', '=', '/project/51695968093') //Team 0
 	    .or('TimeEntryItem.Project', '=', '/project/49211212038') //labpro
+	    .or('TimeEntryItem.Project', '=', '/project/49211213320') //workday
 	    .or('TimeEntryItem.Project', '=', '/project/50014229603') //data center consolidation
 	    .or('TimeEntryItem.Project', '=', '/project/49211215929') //Team System Engineering
 	    .or('TimeEntryItem.Project', '=', '/project/49211215121') //Team Network
-	    .and('DateVal', '>=', '2016-05-14T00:00:00.000Z').and('DateVal', '<=', '2016-05-20T00:00:00.000Z'),
+	    .or('TimeEntryItem.Project', '=', '/project/49211213745') //tbi architecture
+	    .or('TimeEntryItem.Project', '=', '/project/57673354287') //cicd team	    
+	    .and('DateVal', '>=', '2016-06-18T00:00:00.000Z').and('DateVal', '<=', '2016-06-26T00:00:00.000Z'),
 	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
 	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
 	    
