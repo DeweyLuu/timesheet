@@ -29,7 +29,7 @@ function entireQuery() {
 	    //order: 'Rank', //how to sort the results
 	    //fetch: ['Project', 'User', 'task', 'WorkProduct', 'WeekStartDate'],
 	    fetch: ['TimeEntryItem', 'DateVal', 'LastUpdated ' ,'Hours', 'User', 'WorkProduct', 'FormattedID', 'Epic', 
-	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'owner'],
+	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'owner', 'c_Expenditure'],
 
 	    ///user/49739083541 joel
 	    ///user/51543502510 james
@@ -85,7 +85,7 @@ function entireQuery() {
 	    if(error) {
 	        console.log(error);
 	    } else {
-	        var fields = ['User', 'Project', 'Date', 'Hours', 'NameCombo', 'EpicCombo', 'ThemeCombo', 
+	        var fields = ['User', 'Project', 'Date', 'Hours', 'NameCombo', 'WorkProduct.c_Expenditure', 'EpicCombo', 'ThemeCombo', 
 	        'Theme.c_Projects'];
 	        var theResults = result.Results;
 	        
@@ -94,6 +94,7 @@ function entireQuery() {
 	        	bigStories[i].User = theResults[i].TimeEntryItem.User._refObjectName;
 	        	bigStories[i].Date = theResults[i].DateVal.slice(0, 10);
 	        	bigStories[i].Project = theResults[i].TimeEntryItem.Project.Name;
+
 	        	if (theResults[i].TimeEntryItem.WorkProduct == null) {
 	        		bigStories[i].WorkProduct = null;
 	        	} else {

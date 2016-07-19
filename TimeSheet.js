@@ -29,7 +29,7 @@ function entireQuery() {
 	    //order: 'Rank', //how to sort the results
 	    //fetch: ['Project', 'User', 'task', 'WorkProduct', 'WeekStartDate'],
 	    fetch: ['TimeEntryItem', 'DateVal', 'LastUpdated ' ,'Hours', 'User', 'Task', 'WorkProduct', 'FormattedID', 'Epic', 
-	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString'],
+	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'c_Expenditure'],
 
 	    ///user/49739083541 joel
 	    ///user/51543502510 james
@@ -58,6 +58,7 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/50402293352') //scrum team 9
 	    .or('TimeEntryItem.Project', '=', '/project/50301126915') //swipejobs
 	    .or('TimeEntryItem.Project', '=', '/project/51695968093') //Team 0
+	    .or('TimeEntryItem.Project', '=', '/project/49211212383') //Rally
 	    .or('TimeEntryItem.Project', '=', '/project/49211212038') //labpro
 	    .or('TimeEntryItem.Project', '=', '/project/49211213320') //workday
 	    .or('TimeEntryItem.Project', '=', '/project/50014229603') //data center consolidation
@@ -65,7 +66,7 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/49211215121') //Team Network
 	    .or('TimeEntryItem.Project', '=', '/project/49211213745') //tbi architecture
 	    .or('TimeEntryItem.Project', '=', '/project/57673354287') //cicd team	    
-	    .and('DateVal', '>=', '2016-06-18T00:00:00.000Z').and('DateVal', '<=', '2016-06-26T00:00:00.000Z'),
+	    .and('DateVal', '>=', '2016-07-09T00:00:00.000Z').and('DateVal', '<=', '2016-07-17T00:00:00.000Z'),
 	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
 	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
 	    
@@ -85,7 +86,7 @@ function entireQuery() {
 	    if(error) {
 	        console.log(error);
 	    } else {
-	        var fields = ['User', 'Project', 'Date', 'Hours', 'WorkProduct.FormattedID', 'WorkProduct.Name','Task.Name', 'Theme.FormattedID', 'Theme.Name', 'Theme.c_Projects', 'Epic.FormattedID', 'Epic.Name'];
+	        var fields = ['User', 'Project', 'Date', 'Hours', 'WorkProduct.FormattedID', 'WorkProduct.Name', 'WorkProduct.c_Expenditure','Task.Name', 'Theme.FormattedID', 'Theme.Name', 'Theme.c_Projects', 'Epic.FormattedID', 'Epic.Name'];
 	        var theResults = result.Results;
 	        
 	       	for (var i = 0; i <= theResults.length-1; i++) {
@@ -93,6 +94,7 @@ function entireQuery() {
 	        	bigStories[i].User = theResults[i].TimeEntryItem.User._refObjectName;
 	        	bigStories[i].Date = theResults[i].DateVal.slice(0, 10);
 	        	bigStories[i].Project = theResults[i].TimeEntryItem.Project.Name;
+
 	        	if (theResults[i].TimeEntryItem.Task == null && theResults[i].TimeEntryItem.WorkProduct == null) {
 	        		bigStories[i].Task = null;
 	        		bigStories[i].WorkProduct = null;
@@ -116,8 +118,7 @@ function entireQuery() {
 	        		}
 	        	}
 	        }
-			//console.log(bigStories[5]);
-	        
+			
 	        var gotDate = new Date();
 	        var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	        var gotDate1 = month[gotDate.getMonth()];
@@ -142,7 +143,7 @@ function entireQuery() {
 	        		console.log('file saved!');
 	        	})
 	        })
-        
+     
 	    }
 	});
 };
