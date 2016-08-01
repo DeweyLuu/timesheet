@@ -65,7 +65,11 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/49211215121') //Team Network
 	    .or('TimeEntryItem.Project', '=', '/project/49211213745') //tbi architecture
 	    .or('TimeEntryItem.Project', '=', '/project/57673354287') //cicd team
-	    .and('DateVal', '>=', '2016-05-21T00:00:00.000Z').and('DateVal', '<=', '2016-06-24T00:00:00.000Z'),
+	    .or('TimeEntryItem.Project', '=', '/project/57673349113') //CICD
+	    .or('TimeEntryItem.Project', '=', '/project/49211212383') //rally
+	    
+	    
+	    .and('DateVal', '>=', '2016-06-25T00:00:00.000Z').and('DateVal', '<=', '2016-07-22T00:00:00.000Z'),
 	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
 	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
 	    
