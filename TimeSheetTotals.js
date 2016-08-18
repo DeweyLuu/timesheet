@@ -26,24 +26,9 @@ function entireQuery() {
 	    start: 1, //the 1-based start index, defaults to 1
 	    pageSize: 2, //the page size (1-200, defaults to 200)
 	    limit: Infinity, //the maximum number of results to return- enables auto paging
-	    //order: 'Rank', //how to sort the results
-	    //fetch: ['Project', 'User', 'task', 'WorkProduct', 'WeekStartDate'],
 	    fetch: ['TimeEntryItem', 'DateVal', 'LastUpdated ' ,'Hours', 'User', 'WorkProduct', 'FormattedID', 'Epic', 
 	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'owner', 'c_Expenditure'],
 
-	    ///user/49739083541 joel
-	    ///user/51543502510 james
-	    ///user/52289388759 david
-	    /*
-	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/50983112863').or('TimeEntryItem.Project', '=', '/project/50982923609')
-	    .or('TimeEntryItem.Project', '=', '/project/49998887731').or('TimeEntryItem.Project', '=', '/project/50982925414')
-	    .or('TimeEntryItem.Project', '=', '/project/50982926429').or('TimeEntryItem.Project', '=', '/project/55635571848')
-	    .and('DateVal', '>=', '2016-05-07T00:00:00.000Z').and('DateVal', '<=', '2016-05-13T00:00:00.000Z'),
-	    */
-	    /*
-	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/50983112863')
-	    .and('DateVal', '>=', '2016-05-08T00:00:00.000Z').and('DateVal', '<=', '2016-05-15T00:00:00.000Z'),
-	    */
 	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/49211213851') //tbi development
 	    .or('TimeEntryItem.Project', '=', '/project/56200604007') //prism dev
 	    .or('TimeEntryItem.Project', '=', '/project/49998887731') //prism
@@ -69,7 +54,8 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/49211212383') //rally
 	    
 	    
-	    .and('DateVal', '>=', '2016-06-25T00:00:00.000Z').and('DateVal', '<=', '2016-07-22T00:00:00.000Z'),
+	    //.and('DateVal', '>=', '2016-06-25T00:00:00.000Z').and('DateVal', '<=', '2016-07-22T00:00:00.000Z'),
+	   	.and('DateVal', '>=', '2016-06-23T00:00:00.000Z').and('DateVal', '<=', '2016-08-19T00:00:00.000Z'),
 	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
 	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
 	    
