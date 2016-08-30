@@ -31,19 +31,6 @@ function entireQuery() {
 	    fetch: ['TimeEntryItem', 'DateVal', 'LastUpdated ' ,'Hours', 'User', 'Task', 'WorkProduct', 'FormattedID', 'Epic', 
 	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'c_Expenditure'],
 
-	    ///user/49739083541 joel
-	    ///user/51543502510 james
-	    ///user/52289388759 david
-	    /*
-	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/50983112863').or('TimeEntryItem.Project', '=', '/project/50982923609')
-	    .or('TimeEntryItem.Project', '=', '/project/49998887731').or('TimeEntryItem.Project', '=', '/project/50982925414')
-	    .or('TimeEntryItem.Project', '=', '/project/50982926429').or('TimeEntryItem.Project', '=', '/project/55635571848')
-	    .and('DateVal', '>=', '2016-05-07T00:00:00.000Z').and('DateVal', '<=', '2016-05-13T00:00:00.000Z'),
-	    */
-	    /*
-	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/50983112863')
-	    .and('DateVal', '>=', '2016-05-08T00:00:00.000Z').and('DateVal', '<=', '2016-05-15T00:00:00.000Z'),
-	    */
 	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/49211213851') //tbi development
 	    .or('TimeEntryItem.Project', '=', '/project/56200604007') //prism dev
 	    .or('TimeEntryItem.Project', '=', '/project/49998887731') //prism
@@ -70,9 +57,9 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/59943455520') //enterprise hcm payroll
 	    .or('TimeEntryItem.Project', '=', '/project/50141809632') //tempworks
 	    .or('TimeEntryItem.Project', '=', '/project/49211211924') //ellis
-	    .and('DateVal', '>=', '2016-08-06T00:00:00.000Z').and('DateVal', '<=', '2016-08-14T00:00:00.000Z'),
-	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
-	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
+	    .or('TimeEntryItem.Project', '=', '/project/60584798532') //tempworks dev
+	    .or('TimeEntryItem.Project', '=', '/project/49431748567') //application engineer
+	    .and('DateVal', '>=', '2016-08-20T00:00:00.000Z').and('DateVal', '<=', '2016-08-28T00:00:00.000Z'),
 	    
 	    scope: {
 	    	//project: '/project/50982925414' //info dev
@@ -80,7 +67,7 @@ function entireQuery() {
 	    	//project: '/project/50982923609' //core
 	    	//project: '/project/49998887731' //prism
 	    	//project: '/project/50982926429' //finance
-	    	//project: '/project/55635571848' //db&migration
+	    	//project: '/project/55635571848' //db&migration	    	
 	    	project: '/project/49211210961', //alm project
 	    	//workspace: '/workspace/48926045219',
 	    	down: true,

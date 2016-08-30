@@ -43,29 +43,25 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/50402293352') //scrum team 9
 	    .or('TimeEntryItem.Project', '=', '/project/50301126915') //swipejobs
 	    .or('TimeEntryItem.Project', '=', '/project/51695968093') //Team 0
+	    .or('TimeEntryItem.Project', '=', '/project/49211212383') //Rally
 	    .or('TimeEntryItem.Project', '=', '/project/49211212038') //labpro
 	    .or('TimeEntryItem.Project', '=', '/project/49211213320') //workday
 	    .or('TimeEntryItem.Project', '=', '/project/50014229603') //data center consolidation
 	    .or('TimeEntryItem.Project', '=', '/project/49211215929') //Team System Engineering
 	    .or('TimeEntryItem.Project', '=', '/project/49211215121') //Team Network
 	    .or('TimeEntryItem.Project', '=', '/project/49211213745') //tbi architecture
-	    .or('TimeEntryItem.Project', '=', '/project/57673354287') //cicd team
 	    .or('TimeEntryItem.Project', '=', '/project/57673349113') //CICD
-	    .or('TimeEntryItem.Project', '=', '/project/49211212383') //rally
-	    
+	    .or('TimeEntryItem.Project', '=', '/project/57673354287') //cicd team
+	    .or('TimeEntryItem.Project', '=', '/project/59943455520') //enterprise hcm payroll
+	    .or('TimeEntryItem.Project', '=', '/project/50141809632') //tempworks
+	    .or('TimeEntryItem.Project', '=', '/project/49211211924') //ellis	    
 	    
 	    //.and('DateVal', '>=', '2016-06-25T00:00:00.000Z').and('DateVal', '<=', '2016-07-22T00:00:00.000Z'),
-	   	.and('DateVal', '>=', '2016-06-23T00:00:00.000Z').and('DateVal', '<=', '2016-08-19T00:00:00.000Z'),
+	   	.and('DateVal', '>=', '2016-07-23T00:00:00.000Z').and('DateVal', '<=', '2016-08-19T00:00:00.000Z'),
 	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
 	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
 	    
 	    scope: {
-	    	//project: '/project/50982925414' //info dev
-	    	//project: '/project/50983112863' //qwod
-	    	//project: '/project/50982923609' //core
-	    	//project: '/project/49998887731' //prism
-	    	//project: '/project/50982926429' //finance
-	    	//project: '/project/55635571848' //db&migration
 	    	project: '/project/49211210961', //alm project
 	    	//workspace: '/workspace/48926045219',
 	    	down: true,
