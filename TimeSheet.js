@@ -29,7 +29,7 @@ function entireQuery() {
 	    //order: 'Rank', //how to sort the results
 	    //fetch: ['Project', 'User', 'task', 'WorkProduct', 'WeekStartDate'],
 	    fetch: ['TimeEntryItem', 'DateVal', 'LastUpdated ' ,'Hours', 'User', 'Task', 'WorkProduct', 'FormattedID', 'Epic', 
-	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'c_Expenditure'],
+	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'c_Expenditure', 'Tags'],
 
 	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/49211213851') //tbi development
 	    .or('TimeEntryItem.Project', '=', '/project/56200604007') //prism dev
@@ -77,7 +77,8 @@ function entireQuery() {
 	    if(error) {
 	        console.log(error);
 	    } else {
-	        var fields = ['User', 'Project', 'Date', 'Hours', 'WorkProduct.FormattedID', 'WorkProduct.Name', 'WorkProduct.c_Expenditure','Task.Name', 'Theme.FormattedID', 'Theme.Name', 'Theme.c_Projects', 'Epic.FormattedID', 'Epic.Name'];
+	        var fields = ['User', 'Project', 'Date', 'Hours', 'WorkProduct.FormattedID', 'WorkProduct.Name', 'WorkProduct.c_Expenditure',
+	        'Task.Name', 'Theme.FormattedID', 'Theme.Name', 'Theme.c_Projects', 'Epic.FormattedID', 'Epic.Name'];
 	        var theResults = result.Results;
 	        
 	       	for (var i = 0; i <= theResults.length-1; i++) {

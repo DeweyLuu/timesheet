@@ -27,7 +27,7 @@ function entireQuery() {
 	    pageSize: 2, //the page size (1-200, defaults to 200)
 	    limit: Infinity, //the maximum number of results to return- enables auto paging
 	    fetch: ['TimeEntryItem', 'DateVal', 'LastUpdated ' ,'Hours', 'User', 'WorkProduct', 'FormattedID', 'Epic', 
-	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'owner', 'c_Expenditure'],
+	    'Project', 'Name', 'Parent', 'Projects', 'Defects', 'ProjectDisplayString', 'owner', 'c_Expenditure', 'Tags'],
 
 	    query: queryUtils.where('TimeEntryItem.Project', '=', '/project/49211213851') //tbi development
 	    .or('TimeEntryItem.Project', '=', '/project/56200604007') //prism dev
