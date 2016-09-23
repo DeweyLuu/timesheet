@@ -54,10 +54,15 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/57673354287') //cicd team
 	    .or('TimeEntryItem.Project', '=', '/project/59943455520') //enterprise hcm payroll
 	    .or('TimeEntryItem.Project', '=', '/project/50141809632') //tempworks
-	    .or('TimeEntryItem.Project', '=', '/project/49211211924') //ellis	    
+	    .or('TimeEntryItem.Project', '=', '/project/49211211924') //ellis
+	    .or('TimeEntryItem.Project', '=', '/project/60584798532') //tempworks dev
+	    .or('TimeEntryItem.Project', '=', '/project/62041546283') //Prism nondev
+	    .or('TimeEntryItem.Project', '=', '/project/49431748567') //application support
+	    .or('TimeEntryItem.Project', '=', '/project/49431748837') //data tier team   
 	    
 	    //.and('DateVal', '>=', '2016-06-25T00:00:00.000Z').and('DateVal', '<=', '2016-07-22T00:00:00.000Z'),
-	   	.and('DateVal', '>=', '2016-07-23T00:00:00.000Z').and('DateVal', '<=', '2016-08-19T00:00:00.000Z'),
+	   	//.and('DateVal', '>=', '2016-07-23T00:00:00.000Z').and('DateVal', '<=', '2016-08-19T00:00:00.000Z'),
+	    .and('DateVal', '>=', '2016-08-20T00:00:00.000Z').and('DateVal', '<=', '2016-09-23T00:00:00.000Z'),
 	    //.and('TimeEntryItem.User', '=', '/user/51543502510'),
 	    //.or('TimeEntryItem.User', '=', '/user/52289388759'),
 	    
