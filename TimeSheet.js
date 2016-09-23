@@ -58,8 +58,11 @@ function entireQuery() {
 	    .or('TimeEntryItem.Project', '=', '/project/50141809632') //tempworks
 	    .or('TimeEntryItem.Project', '=', '/project/49211211924') //ellis
 	    .or('TimeEntryItem.Project', '=', '/project/60584798532') //tempworks dev
-	    .or('TimeEntryItem.Project', '=', '/project/49431748567') //application engineer
-	    .and('DateVal', '>=', '2016-08-20T00:00:00.000Z').and('DateVal', '<=', '2016-08-28T00:00:00.000Z'),
+	    .or('TimeEntryItem.Project', '=', '/project/62041546283') //Prism nondev
+	    .or('TimeEntryItem.Project', '=', '/project/49431748567') //application support
+	    .or('TimeEntryItem.Project', '=', '/project/49431748837') //data tier team
+	    
+	    .and('DateVal', '>=', '2016-09-10T00:00:00.000Z').and('DateVal', '<=', '2016-09-18T00:00:00.000Z'),
 	    
 	    scope: {
 	    	//project: '/project/50982925414' //info dev
